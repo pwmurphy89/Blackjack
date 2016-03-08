@@ -1,0 +1,92 @@
+#main-wrapper {
+	background-color: green;
+	width: 50%;
+	height: 80%;
+	margin: auto;
+	border-radius: 5%;
+	margin-top: 20px;
+	float: left;
+}
+
+#header {
+	text-align: center;
+	background-color: red;
+	color: white;
+	width: 10%;
+	margin: auto;
+}
+
+#row-wrapper {
+	display: block;
+}
+
+#dealer-wrapper {
+	width: 80%;
+	height: 50px;
+	margin: 20px auto;
+	position: relative;
+
+}
+#dealer-text {
+	float: left;
+	color: white;
+	margin-top: 10px;
+	text-align: center;
+}
+
+.dealer-card {
+	border: 2px solid black;
+	width: 40px;
+	height: 60px;
+	display: inline-block;
+	float: left;
+	margin: 0px 10px;
+
+}
+#player-wrapper {
+	width: 80%;
+	height: 50px;
+	margin: 20px auto;
+}
+
+#player-text {
+	float: left;
+	color: white;
+	margin-top: 10px;
+	text-align: center;
+}
+
+.player-card {
+	border: 2px solid black;
+	width: 40px;
+	height: 60px;
+	display: inline-block;
+	float: left;
+	margin: 0px 10px;
+}
+
+#hit-wrapper {
+	width: 80%;
+    height: 50px;
+    margin: 20px auto 37px;
+    text-align: center;
+}
+
+.choice {
+	display: inline-block;
+    margin: 25px 52px;
+    text-align: center;
+    border: 2px solid black;
+    padding: 5px;
+}
+
+#bottom-message {
+	width: 50%;
+    height: 25px;
+    margin: auto;
+    margin-bottom: 10px;
+    text-align: center;
+    background-color: white;
+    border: 2px solid red;
+    line-height: 25px;
+}
