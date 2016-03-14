@@ -1,91 +1,49 @@
-#main-wrapper {
+
+.the-table {
 	background-color: green;
+	margin-top: 30px;
+	border-radius: 10px;
+	padding: 30px 0px;
+	border: 2px solid black;
+}
+
+.card {
+	color: black;
+	background-color: white;
+	height:120px;
 
 
-	border-radius: 5%;
-	margin-top: 20px;
+
+}
+.card.col-sm-2 {
+	margin: 10px;
+	width: 11%;
 
 }
 
-#header {
-	text-align: center;
-	background-color: red;
+
+
+.card.empty {
+	background-color: #ddd;
+	border: dashed 1px black;
+}
+
+.dealer-total-wrapper, .player-total-wrapper {
 	color: white;
-	width: 10%;
-	margin: auto;
-}
+	font-size: 16px;
+	text-align: center;
 
-#row-wrapper {
+
+}
+.dealer-total-wrapper span, .player-total-wrapper span{
 	display: block;
-}
-
-#dealer-wrapper {
-	width: 80%;
-	height: 50px;
-	margin: 20px auto;
-	position: relative;
-
-}
-#dealer-text {
-	float: left;
-	color: white;
-	margin-top: 10px;
 	text-align: center;
 }
 
-.dealer-card {
-	border: 2px solid black;
-	width: 40px;
-	height: 60px;
-	display: inline-block;
-	float: left;
-	margin: 0px 10px;
-
-}
-#player-wrapper {
-	width: 80%;
-	height: 50px;
-	margin: 20px auto;
-}
-
-#player-text {
-	float: left;
+.action-buttons button{
+	width: 100%;
+	background-color: #0F0F0F;
 	color: white;
-	margin-top: 10px;
-	text-align: center;
+
 }
 
-.player-card {
-	border: 2px solid black;
-	width: 40px;
-	height: 60px;
-	display: inline-block;
-	float: left;
-	margin: 0px 10px;
-}
-
-#hit-wrapper {
-	width: 80%;
-    height: 50px;
-    margin: 20px auto 37px;
-    text-align: center;
-}
-
-.choice {
-	display: inline-block;
-    margin: 25px 52px;
-    text-align: center;
-    border: 2px solid black;
-    padding: 5px;
-}
-
-#bottom-message {
-	width: 50%;
-    height: 25px;
-    margin: auto;
-    margin-bottom: 10px;
-    text-align: center;
-    background-color: white;
-    border: 2px solid red;
-    line-height: 25px;
-}

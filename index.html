@@ -4,66 +4,69 @@
 	
 	<title>BLACKJACK</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 </head>
 <body>
 
 
-	<div id="main-wrapper" class="col-lg-12">
+	<div class="container">
+		<div class="row">
+			<div class="the-table col-sm-8 col-sm-offset-2">
+				<div class="row">
+					<div class="dealer-hand-wrapper col-sm-12">
+						<div class="dealer-total-wrapper col-sm-2">
+							Dealer Total<span class="dealer-total">0</span>
+						</div>
+						
+							<div id="dealer-card-one" class="card empty col-sm-2"></div>
+							<div id="dealer-card-two" class="card empty col-sm-2"></div>
+							<div id="dealer-card-three" class="card empty col-sm-2"></div>
+							<div id="dealer-card-four" class="card empty col-sm-2"></div>
+							<div id="dealer-card-five" class="card empty col-sm-2"></div>
+							<div id="dealer-card-six" class="card empty col-sm-2"></div>
+						
+					</div>
+				</div>	
+
+				<div class="row">
+					<div class="player-hand-wrapper col-sm-12">
+						<div class="player-total-wrapper col-sm-2">
+								Player Total<span class="player-total">0</span>
+						</div>
+
+							<div id="player-card-one" class="card empty col-sm-2"></div>
+							<div id="player-card-two" class="card empty col-sm-2"></div>
+							<div id="player-card-three" class="card empty col-sm-2"></div>
+							<div id="player-card-four" class="card empty col-sm-2"></div>
+							<div id="player-card-five" class="card empty col-sm-2"></div>
+							<div id="player-card-six" class="card empty col-sm-2"></div>
+					</div>
+				</div>
 
 
-		<div id="header">
-		<h1>Wins: 0</h1>
-		</div>	
+				<div class="row action-buttons">
+					<div class="col-sm-2 col-sm-offset-2">
+						<button id="draw-button">Deal</button>
+					</div>
+					<div class="col-sm-2 col-sm-offset-1">
+						<button id="draw-button">Deal</button>
+					</div>
+					<div class="col-sm-2 col-sm-offset-1">
+						<button id="draw-button">Deal</button>
+					</div>
+				</div>
 
-		<div id="row-wrapper" clas="col-lg-8">
 
-
-		<div id="dealer-wrapper">
-			<div id="dealer-text">
-				Dealer Total
-				<div class="total dealer">18</div>
 			</div>
+		</div>
+	</div>
+
+
+
+
 		
-
-
-			<div class="dealer-card one"><input type="button"></div>
-			<div class="dealer-card two"></div>
-			<div class="dealer-card three"></div>
-			<div class="dealer-card four"></div>
-			<div class="dealer-card five"></div>
-			<div class="dealer-card six"></div>
-	
-		</div>
-
-		<div id="player-wrapper">
-			<div id="player-text">
-				<p>Player Total</p>
-				<div class="total player">Number</div>
-
-			</div>
-			<div class="player-card"></div>
-			<div class="player-card"></div>
-			<div class="player-card"></div>
-			<div class="player-card"></div>
-			<div class="player-card"></div>
-			<div class="player-card"></div>
-
-		</div>
-
-		<div id="hit-wrapper">
-			<div class="choice deal">Deal</div>
-			<div class="choice hit">Hit</div>
-			<div class="choice stand">Stand</div>
-
-		</div>
-
 		<div id="bottom-message">You won!</div>
 
-	</div>
-
-	</div>
 	
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 
