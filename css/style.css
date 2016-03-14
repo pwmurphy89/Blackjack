@@ -47,3 +47,13 @@
 
 }
 
+#message {
+	color: white;
+	font-size: 30px;
+
+}
+#reset-button {
+	visibility: visible;
+}
+
+
