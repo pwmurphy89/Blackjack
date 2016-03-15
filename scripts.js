@@ -43,11 +43,31 @@ $(document).ready(function() {
 
 	function calculateTotal(hand, who){
 		var total = 0;
+		var hasAce = false;
 		for(i=0;i<hand.length;i++){
 			var cardvalue = Number(hand[i].slice(0, -1));
-			total += cardvalue;
+			if (cardvalue > 10) {
+				cardvalue = 10;
+			}
+			if (cardvalue == 1 && total < 11) {
+				cardvalue = 11;
+				hasAce = true;
+			}
 
+
+				total += cardvalue;
 		}
+
+		if(total > 21 && hasAce) {
+			total -= 10;
+		}
+		// for (var i=0; i < hand.length; i++){
+		// 	if (Number(hand[i]) == 1 && total > 21) {
+		// 		hand[i] == 1;
+		// 	}
+		// }
+
+
 		var idToGet = "." + who + "-total";
 		$(idToGet).html(total);
 		if (total > 21){
@@ -147,12 +167,14 @@ function checkWin() {
 	if(dealerHas > 21){
 		bust("dealer");
 		
+		
 
 		//The delaer has busted
 	}else{
 		//Neither has busted, dealer has atleast 17.
 		if(playerHas > dealerHas){
 			$("#message").html("You have beaten the dealer!");
+			$("#reset-button").removeClass("hide");
 			$("#hit-button").prop("disabled", "true");
 			$("#stand-button").prop("disabled", "true");
 			$("#draw-button").prop("disabled", "true");
@@ -160,6 +182,7 @@ function checkWin() {
 			//PLayer won
 		}else if (dealerHas > playerHas){
 			$("#message").html("Sorry, dealer won!");
+			$("#reset-button").removeClass("hide");
 			$("#hit-button").prop("disabled", "true");
 			$("#stand-button").prop("disabled", "true");
 			$("#draw-button").prop("disabled", "true");
@@ -167,6 +190,7 @@ function checkWin() {
 			//Dealer won
 		}else {
 			$("#message").html("Tied!");
+			$("#reset-button").removeClass("hide");
 			$("#hit-button").attr("disabled");
 			$("#stand-button").attr("disabled");
 			$("#draw-button").attr("disabled");
@@ -175,9 +199,10 @@ function checkWin() {
 		}
 	}
 }
-
+ 
 
 function bust(who){
+	$("#reset-button").removeClass("hide");
 	if(who === "player"){
 		$("#message").html("You have busted!");
 
@@ -191,16 +216,17 @@ function bust(who){
 
 function reset() {
 	$(".card").addClass("empty");
-	Number($(".player-total").html(0));
-	Number($(".dealer-total").html(0));
+	$(".player-total").html(0);
+	$(".dealer-total").html(0);
 	$("#message").html("");
-	
-	$("#reset-button").hide();
+	$(".card").html('');
+	$("#reset-button").addClass("hide");
 	$("#hit-button").removeAttr("disabled");
 	$("#draw-button").removeAttr("disabled");
 	$("#stand-button").removeAttr("disabled");
 	playerTotalCards = 2;
 	dealerTotalCards = 2;
+
 
 }
 

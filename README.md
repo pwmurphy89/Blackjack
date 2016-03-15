@@ -23,4 +23,4 @@ Binds each button to a JQuery click funtion
 
 ### More JS
 --Disabled buttons after bust or win.
---Added reset button. 
+--Added reset button.  
