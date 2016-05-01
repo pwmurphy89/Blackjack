@@ -38,9 +38,9 @@ body{
 .card.empty {
 	background-color: #ddd;
 	border: 1px solid gray;
-	background-image: url("card-back.jpg");
-	background-size: 126%;
-    background-position: -9px -6px;
+	background-image: url("card-back2.png");
+	background-size: 120%;
+    background-position: -6px -6px;
 }
 
 .dealer-total-wrapper, .player-total-wrapper {
