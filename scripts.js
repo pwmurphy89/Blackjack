@@ -35,7 +35,6 @@ $(document).ready(function() {
 			$(currId).removeClass("empty");
 			// $(currId).html(card.name);
 			var position = (card.x + card.y);
-			console.log(position);
 			$(currId).css("background-position", position);
 				if(delayTotal) {
 					calculateTotal(playerHand, "player");
@@ -76,6 +75,8 @@ $(document).ready(function() {
  //c:clubs/ s:spades/ h:hearts/ d:diamonds
 	function shuffleDeck() {
 		theDeck =[];
+		var x = -1;
+		var y = 0;
 		for(s=1; s<=4; s++){
 			var suit = "";
 			if (s === 1) {
@@ -93,28 +94,27 @@ $(document).ready(function() {
 			}
 			//starting with Ace = 1; King = 13
 			//subtract 73px each time through
-			x = -1;
 			for(i=1;i<=13; i++){
-				var card = new Object();
-				card.name = i + suit;
-				card.y = y +'px';
-				card.x = x + 'px '; 
-				theDeck.push(card);
+				var newCard = new Object();
+				newCard.name = i + suit;
+				newCard.y = y +'px';
+				newCard.x = x + 'px '; 
+				theDeck.push(newCard);
 				x -= 73;
 			}
 		}
 		console.log(theDeck);
 
-		// var numberOfTimesToShuffle = 500;
-		// for(i=1; i<numberOfTimesToShuffle;i++) {
-		// 	card1 = Math.floor(Math.random() * 52);
-		// 	card2 = Math.floor(Math.random() * 52);
-		// 	if(card1 !== card2) {
-		// 		temp = theDeck[card1];
-		// 		theDeck[card1] = theDeck[card2];
-		// 		theDeck[card2] = temp;
-		// 	}
-		// }
+		var numberOfTimesToShuffle = 500;
+		for(i=1; i<numberOfTimesToShuffle;i++) {
+			card1 = Math.floor(Math.random() * 52);
+			card2 = Math.floor(Math.random() * 52);
+			if(card1 !== card2) {
+				temp = theDeck[card1];
+				theDeck[card1] = theDeck[card2];
+				theDeck[card2] = temp;
+			}
+		}
 	};
 
 	function hit() { 
@@ -190,7 +190,9 @@ $(document).ready(function() {
 	};
 
 	function reset() {
+		var emptyPosition = "-6px -6px";
 		$(".card").addClass("empty");
+		$(".card").css("background-position", emptyPosition);
 		$(".player-total").html(0);
 		$(".dealer-total").html(0);
 		$(".dealer-total").addClass("hide");
